@@ -53,7 +53,7 @@ _EOF_
 
 function main {
     echo "### $1 START"
-    while read line
+    while read -r line
     do
         if [[ $line =~ "#" ]];
         then

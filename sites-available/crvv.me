@@ -1,11 +1,9 @@
 server {
 
-    listen [::]:443 ssl http2 deferred;
-    listen 443 ssl http2 deferred;
+    listen 443 ssl http2 deferred fastopen=2;
+    listen [::]:443 ssl http2 deferred fastopen=2;
 
     server_name crvv.me;
-    ssl_certificate      /etc/nginx/ssl/crt;
-    ssl_certificate_key  /etc/nginx/ssl/key;
 
     include h5bp/directive-only/ssl.conf;
 

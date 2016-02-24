@@ -22,4 +22,7 @@ server {
     location ^~ /gogs/ { 
         proxy_pass http://localhost:3000/;
     }
+    location ^~ /wechat/ { 
+        proxy_pass http://localhost:2000/;
+    }
 }

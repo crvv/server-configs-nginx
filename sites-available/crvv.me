@@ -5,6 +5,8 @@ server {
 
     server_name crvv.me;
 
+    ssl_certificate      /etc/letsencrypt/live/crvv.me/fullchain.pem;
+    ssl_certificate_key  /etc/letsencrypt/live/crvv.me/privkey.pem;
     include h5bp/directive-only/ssl.conf;
 
     # Path for static files

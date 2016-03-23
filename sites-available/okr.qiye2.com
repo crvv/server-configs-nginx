@@ -22,6 +22,7 @@ server {
     include h5bp/basic.conf;
 
     location ^~ /wechat/ {
+        include h5bp/directive-only/cross-domain-insecure.conf;
         proxy_pass http://localhost:5000/;
     }
     location ^~ /api/ {
